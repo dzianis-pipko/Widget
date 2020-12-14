@@ -1,15 +1,23 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Navbars } from './components/Navbar/Navbar';
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { Home } from './pages/Home/Home';
+import { Products } from './pages/Products/Products';
+import { Product } from './pages/Product/Product';
 
 
 function App() {
   return (
-    <Fragment>
+    <BrowserRouter>
       <Navbars />
       <div className="container pt-4">
-        <h1>Hello!!!</h1>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/products" component={Products} />
+          <Route path="/products/name" component={Product} />
+        </Switch>
       </div>
-    </Fragment>
+    </BrowserRouter>
   );
 }
 
