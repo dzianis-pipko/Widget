@@ -1,6 +1,7 @@
 import React from 'react';
 import './Navbar.scss';
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom'
 
 export const Navbars = () => {
    return (
@@ -10,8 +11,8 @@ export const Navbars = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                <Nav className="mr-auto">
-                  <Nav.Link href="#home">Home</Nav.Link>
-                  <Nav.Link href="#link">Products</Nav.Link>
+                  <NavLink className="nav-link" exact to="/">Home</NavLink>
+                  <NavLink className="nav-link" to="/products">Products</NavLink>
                </Nav>
                <Form inline>
                   <FormControl type="text" placeholder="Search" className="mr-sm-2" />
