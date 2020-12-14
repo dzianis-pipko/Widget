@@ -13,6 +13,8 @@ export const Navbars = () => {
                <Nav className="mr-auto">
                   <NavLink className="nav-link" exact to="/">Home</NavLink>
                   <NavLink className="nav-link" to="/products">Products</NavLink>
+                  <NavLink className="nav-link" to="/products">Products</NavLink>
+                  <NavLink className="nav-link" to="/products">Products</NavLink>
                </Nav>
                <Form inline>
                   <FormControl type="text" placeholder="Search" className="mr-sm-2" />
