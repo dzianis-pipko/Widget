@@ -1,7 +1,8 @@
 import React from 'react';
 import './Navbar.scss';
-import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom'
+import { Search } from '../Search/Search';
 
 export const Navbars = () => {
    return (
@@ -13,13 +14,8 @@ export const Navbars = () => {
                <Nav className="mr-auto">
                   <NavLink className="nav-link" exact to="/">Home</NavLink>
                   <NavLink className="nav-link" to="/products">Products</NavLink>
-                  <NavLink className="nav-link" to="/products">Products</NavLink>
-                  <NavLink className="nav-link" to="/products">Products</NavLink>
                </Nav>
-               <Form inline>
-                  <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                  <Button variant="outline-success">Search</Button>
-               </Form>
+               <Search />
             </Navbar.Collapse>
          </div>
       </Navbar>
