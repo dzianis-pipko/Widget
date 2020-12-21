@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { FormControl } from 'react-bootstrap'
 import './Search.scss';
+import { QuotesListContext } from '../../context/quotesList/QuotesListContext';
 
 export const Search = () => {
    const [value, setValue] = useState('');
+   const { search } = useContext(QuotesListContext)
+
    const onSubmit = (event) => {
       if (event.key !== 'Enter') {
          return
       }
-      if (value.trim()) {
-         console.log(value);
-      } else {
-         alert('Введите корректное значение')
-      }
+      search(value.trim())
    }
+
    return (
       <FormControl
          type="text"
